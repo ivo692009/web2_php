@@ -14,9 +14,10 @@ and open the template in the editor.
             <?php
              foreach($results as $fila){
                 printf("%s %s (%d años) <br/>",
-                            $fila['apellido'],
-                            $fila['nombre'],
-                            $fila['edad']);
+                            $fila->apellido,
+                            $fila->nombre,
+                            $fila->edad);
+                var_dump($fila);
             } ?>
         </legend>
             
