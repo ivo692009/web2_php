@@ -22,7 +22,7 @@
         $stmt = $pdo->prepare($sql);
         
         //especificamos la salida como un array
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);//podria ser PDO::FETCH_OBJ
+        $stmt->setFetchMode(PDO::FETCH_OBJ);//podria ser PDO::FETCH_OBJ
         
         //sustituimos los parametros con los valores reales
         $stmt->bindParam(':edad',$edad_cliente);
