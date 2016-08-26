@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
-        ?>
+        <h1>Datos Actualizados</h1></br>
+        <a href="alta_vista.php">Volver al principio</a><br/>
     </body>
 </html>

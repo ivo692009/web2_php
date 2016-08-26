@@ -1,8 +1,5 @@
 <?php 
  $localidades = ["Rawson","Trelew","Gaiman"];
-if(!isset($control_v)):
-    echo "deja de flashear wacho";
-    endif; 
 ?>
 
 <html>
