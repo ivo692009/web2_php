@@ -13,7 +13,7 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "SELECT * FROM clientes";
+        $sql = "SELECT * FROM clientes JOIN nacionalidades ON clientes.nacionalidad_id=nacionalidades.id";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);

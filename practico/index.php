@@ -33,7 +33,7 @@
                            else{
                                printf("<th>Inactivo</th>");
                            }
-                           printf("<th>%s</th>",$p->nacionalidad);
+                           printf("<th>%s</th>",$p->descripcion);
                            ?>
                            
                            <th><a href="modificacion_vista.php">Modificar</a></th>
