@@ -1,5 +1,6 @@
 <?php 
     require __DIR__.'/listado_index.php';
+    $id;
 ?>
 <html>
     <head>
@@ -36,8 +37,8 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>
                            
-                           <th><a href="modificacion_vista.php">Modificar</a></th>
-                           <th><a href="baja_vista.php">Baja</a></th></tr><br/>
+                           <th><a href="modificacion_vista.php" name="id" value="<?php $id=$p->id ?>">Modificar</a></th>
+                           <th><a href="baja_vista.php" name="id" value="<?php $id=$p->id ?>">Baja</a></th></tr><br/>
                         <?php } ?>
                 </table>
             </legend>
