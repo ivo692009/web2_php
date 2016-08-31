@@ -10,9 +10,9 @@
         <form action="alta.php" method="POST">    
             <fieldset>
                 <legend>Formulario</legend>
-                <h1>Nombre: </h1> <input type="text" name="nombre" id="nombre"/>
+                <h1>Nombre:<input type="text" name="nombre" id="nombre"/> </h1>
                 <h1>Apellido: <input type="text" name="apellido" id="apellido"</h1>
-                <h1>Fecha de Nacimiento: </h1> <input type="date" name="date" id="date"/>
+                <h1>Fecha de Nacimiento:<input type="date" name="date" id="date"/></h1>
                 <h1>Nacionalidad: </h1> 
                 <select name="nacionalidad"> 
                     <?php foreach ($n as $n1):?>
