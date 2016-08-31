@@ -13,7 +13,7 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "SELECT clientes.id, clientes.nombre, clientes.apellido, clientes.activo, clientes.fechnac, nacionalidades.descripcion  FROM clientes JOIN nacionalidades ON clientes.nacionalidad_id=nacionalidades.id";
+        $sql = "SELECT * FROM nacionalidades";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);
@@ -25,7 +25,7 @@
         $stmt->execute();
         
         //recuperamos los datos en el array asoc.
-        $results = $stmt->fetchAll();
+        $n = $stmt->fetchAll();
       
     }
     

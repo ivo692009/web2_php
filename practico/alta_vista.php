@@ -1,5 +1,5 @@
-<?php 
- $n = ["Argentino","Chileno","Paraguayo"];
+<?php
+    require __DIR__.'/nacionalidades.php';
 ?>
 <html>
     <head>
@@ -14,9 +14,9 @@
                 <h1>Apellido: <input type="text" name="apellido" id="apellido"</h1>
                 <h1>Fecha de Nacimiento:<input type="date" name="date" id="date"/></h1>
                 <h1>Nacionalidad: </h1> 
-                <select name="nacionalidad"> 
+                <select name="nacionalidad_id"> 
                     <?php foreach ($n as $n1):?>
-                    <option id="localidad" value="<?php echo $n1; ?>"> <?php echo $n1 ?> </option>
+                    <option id="nacionalidad_id" value="<?php printf("%s",$n1->id); ?>"> <?php printf("%s",$n1->descripcion); ?> </option>
                     <?php endforeach; ?>
                 </select>
                 <h1>Estado: </h1> 

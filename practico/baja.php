@@ -18,7 +18,7 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "DELETE * FROM clientes WHERE clientes.id = :id";
+        $sql = "DELETE FROM clientes WHERE id = :id";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);

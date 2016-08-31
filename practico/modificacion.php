@@ -7,20 +7,9 @@
     $nombre_nuevo= $_POST['nombre'];
     $apellido_nuevo= $_POST['apellido'];
     $fechnac_nuevo=$_POST['date'];
-    $nacionalidad_nuevo=$_POST['nacionalidad']; //falta agregar
+    $nacionalidad_id_nuevo=$_POST['nacionalidad_id']; 
     $estado_nuevo= $_POST['estado'];
     $id=$_POST['id'];
-    $iso;
-    
-    if($nacionalidad_nuevo=="Argentino"){
-      $iso="AR";  
-    }elseif($nacionalidad_nuevo=="Chileno"){
-      $iso="CL";  
-    }elseif($nacionalidad_nuevo=="Paraguayo"){
-      $iso="PY";  
-    }else{
-      $iso="XX";  
-    }
     
     header('Content-Type: text/html; charset=UTF-8');
     
@@ -33,8 +22,7 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "UPDATE `clientes` SET apellido= :apellido,nombre=:nombre, activo=:estado,fechnac=:fechnac WHERE clientes.id=:id;
-                UPDATE `nacionalidades` SET descripcion=:nacionalidad,iso=:iso WHERE nacionalidades.id=:id";
+        $sql = "UPDATE `clientes` SET apellido=:apellido, nombre=:nombre, activo=:estado, fechnac=:fechnac, nacionalidad_id=:nacionalidad_id WHERE clientes.id=:id";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);
@@ -47,8 +35,7 @@
         $stmt->bindParam(':apellido',$apellido_nuevo);
         $stmt->bindParam(':estado',$estado_nuevo);
         $stmt->bindParam(':fechnac',$fechnac_nuevo);
-        $stmt->bindParam(':nacionalidad',$nacionalidad_nuevo);
-        $stmt->bindParam(':iso',$iso);
+        $stmt->bindParam(':nacionalidad_id',$nacionalidad_id_nuevo);
         $stmt->bindParam(':id',$id);
         
         

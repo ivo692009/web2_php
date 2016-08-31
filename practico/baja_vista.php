@@ -32,7 +32,7 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>   
                         <?php } ?>
-                    <th><a href="baja.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id?>">Eliminar</a></th>
+                    <th><a href="baja.php?id=<?php printf("%s",$p->id);?>" name="id">Eliminar</a></th>
                     <th><a href="index.php">Volver</a></th></tr><br/>
                 </table>
     </body>

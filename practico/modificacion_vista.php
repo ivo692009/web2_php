@@ -1,6 +1,6 @@
 <?php
     require __DIR__.'/baja_persona.php';
-    $n = ["Argentino","Chileno","Paraguayo"];
+    require __DIR__.'/nacionalidades.php';
 ?>
 <html>
     <head>
@@ -38,11 +38,11 @@
                 <legend>Formulario</legend>
                 <h1>Nombre:<input type="text" name="nombre" id="nombre"/></h1>
                 <h1>Apellido: <input type="text" name="apellido" id="apellido"</h1>
-                <h1>Fecha de Nacimiento:<input type="date" name="date" id="date"/></h1>
+                <h1>Fecha de Nacimiento:<input type="date" name="date" id="date"/></h1> 
                 <h1>Nacionalidad: </h1> 
-                <select name="nacionalidad"> 
+                <select name="nacionalidad_id"> 
                     <?php foreach ($n as $n1):?>
-                    <option id="localidad" value="<?php echo $n1; ?>"> <?php echo $n1 ?> </option>
+                    <option id="nacionalidad_id" value="<?php printf("%s",$n1->id); ?>"> <?php printf("%s",$n1->descripcion); ?> </option>
                     <?php endforeach; ?>
                 </select>
                 <h1>Estado: </h1> 
@@ -50,8 +50,8 @@
                     <option id="estado" value="1">Activo</option>
                     <option id="estado" value="0">Innactivo</option>
                 </select>
-                <input type="hidden" name="id" value="<?php echo $p->id ?>"/>
-                <input type="submit" name="Alta"/>
+                <input type="hidden" name="id" value="<?php printf("%s",$p->id); ?>"/>
+                <input type="submit" name="Modificacion"/>
             </fieldset>
         </form>           
         </table>

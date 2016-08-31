@@ -1,6 +1,6 @@
 <?php 
     require __DIR__.'/listado_index.php';
-    $id;
+    $id=0;
 ?>
 <html>
     <head>
