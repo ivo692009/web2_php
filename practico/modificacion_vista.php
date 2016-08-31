@@ -50,6 +50,7 @@
                     <option id="estado" value="1">Activo</option>
                     <option id="estado" value="0">Innactivo</option>
                 </select>
+                <input type="hidden" name="id" value="<?php echo $p->id ?>"/>
                 <input type="submit" name="Alta"/>
             </fieldset>
         </form>           
