@@ -37,8 +37,8 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>
                            
-                           <th><a href="modificacion_vista.php" name="id" value="<?php $id=$p->id ?>">Modificar</a></th>
-                           <th><a href="baja_vista.php" name="id" value="<?php $id=$p->id ?>">Baja</a></th></tr><br/>
+                           <th><a href="modificacion_vista.php?id=<?php $p->id ?>" name="id" value="<?php $id=$p->id ?>">Modificar</a></th>
+                           <th><a href="baja_vista.php?id=<?php $p->id ?>" name="id" value="<?php $id=$p->id ?>">Baja</a></th></tr><br/>
                         <?php } ?>
                 </table>
             </legend>

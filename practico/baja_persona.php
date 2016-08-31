@@ -3,9 +3,9 @@
     error_reporting(E_ALL);
     ini_set("display_errors",true);
     header('Content-Type: text/html; charset=UTF-8');
+    $b_id=$_GET["id"];
     
     try {
-    $b_id=$_GET['id'];
         
         $pdo= new PDO('mysql:host=localhost;dbname=clientes_db',$usuario,$contraseña);
         
@@ -14,7 +14,7 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "SELECT * FROM clientes JOIN nacionalidades ON clientes.nacionalidad_id=nacionalidades.id WHERE :id=clientes.id";
+        $sql = "SELECT * FROM clientes WHERE :id=clientes.id";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);
