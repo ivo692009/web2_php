@@ -7,7 +7,6 @@
         <title></title>
     </head>
     <body>
-        
         <h1>La persona Seleccionada es</h1>
         <table>
                     <tr>
@@ -33,6 +32,8 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>   
                         <?php } ?>
+                    <th><a href="baja.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id?>">Eliminar</a></th>
+                    <th><a href="index.php">Volver</a></th></tr><br/>
                 </table>
     </body>
 </html>
