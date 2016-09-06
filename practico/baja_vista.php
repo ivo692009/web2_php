@@ -1,5 +1,6 @@
 <?php
     require __DIR__.'/baja_persona.php';
+    $baja=true;
 ?>
 <html>
     <head>

@@ -1,5 +1,12 @@
 <?php
 
+      if(!isset($modificacion)){
+        header("Location : modificacion_vista.php");
+        die();
+    }
+    
+    $modificacion=false;
+
     require __DIR__."/usuario.php";
         
     error_reporting(E_ALL);

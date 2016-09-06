@@ -1,14 +1,25 @@
 <?php
     require __DIR__.'/baja_persona.php';
     require __DIR__.'/nacionalidades.php';
+    $modificacion=true;
 ?>
+
+<script>function formulario(f) {
+if (f.nombre.value   == '') { alert ('El nombre esta vacío'); 
+f.nombre.focus(); return false; }
+if (f.apeliido.value   == '') { alert ('El apellido esta vacío'); 
+f.apellido.focus(); return false; }
+if (f.date.value   == '') { alert ('Fecha no asignada'); 
+f.date.focus(); return false; }
+</script>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <form action="modificacion.php" method="POST">   
+        <form onsubmit="return formulario(this)" action="modificacion.php" method="POST">   
         <h1>La persona Seleccionada es</h1>
         <table>
             <tr>

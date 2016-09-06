@@ -1,5 +1,12 @@
 <?php
 
+      if(!isset($baja)){
+        header("Location : baja_vista.php");
+        die();
+    }
+    
+    $baja=false;
+
     require __DIR__."/usuario.php";
         
     error_reporting(E_ALL);

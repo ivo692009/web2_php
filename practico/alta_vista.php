@@ -1,13 +1,23 @@
 <?php
     require __DIR__.'/nacionalidades.php';
+    $alta = true;
 ?>
+<script>function formulario(f) {
+if (f.nombre.value   == '') { alert ('El nombre esta vacío'); 
+f.nombre.focus(); return false; }
+if (f.apeliido.value   == '') { alert ('El apellido esta vacío'); 
+f.apellido.focus(); return false; }
+if (f.date.value   == '') { alert ('Fecha no asignada'); 
+f.date.focus(); return false; }
+</script>
+
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Alta de usuario</title>
     </head>
     <body>
-        <form action="alta.php" method="POST">    
+        <form onsubmit="return formulario(this)" action="alta.php" method="POST">    
             <fieldset>
                 <legend>Formulario</legend>
                 <h1>Nombre:<input type="text" name="nombre" id="nombre"/> </h1>
