@@ -1,23 +1,12 @@
 <?php
-
-      if(!isset($baja)){
-        header("Location : baja_vista.php");
-        die();
-    }
-    
-    $baja=false;
-
-    require __DIR__."/usuario.php";
-        
+    require __DIR__.'/usuario.php';
     error_reporting(E_ALL);
     ini_set("display_errors",true);
-    
-    $baja_id=$_GET["id"];
-                
     header('Content-Type: text/html; charset=UTF-8');
     
     try {
         
+        //Coneccion a la base de datos
         $pdo= new PDO('mysql:host=localhost;dbname=clientes_db',$usuario,$contraseña);
         
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
@@ -25,7 +14,9 @@
         $pdo->exec("SET NAMES UTF8");
         
         //armamos el SQL
-        $sql = "DELETE FROM clientes WHERE id = :id";
+        $sql = "SELECT clientes.id, clientes.nombre, clientes.apellido, clientes.activo, clientes.fechnac, nacionalidades.descripcion  "
+                . "FROM clientes "
+                . "JOIN nacionalidades ON clientes.nacionalidad_id=nacionalidades.id";
         
         //preparamos un statement con el sql anterior
         $stmt = $pdo->prepare($sql);
@@ -33,16 +24,14 @@
         //especificamos la salida como un array
         $stmt->setFetchMode(PDO::FETCH_OBJ);//podria ser PDO::FETCH_OBJ
         
-        //sustituimos los parametros con los valores reales
-        $stmt->bindParam(':id',$baja_id);
-        
-        
         //ejecutamos la consulta
         $stmt->execute();
+        
+        //recuperamos los datos en el array asoc.
+        $results = $stmt->fetchAll();
+      
     }
     
     catch(PDOException $e){
         echo 'Error de la coneccion a la BD:' . $e->getMessage();
     }
-    
-    require __DIR__."/salida.php";

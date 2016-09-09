@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'/baja_persona.php';
+    require __DIR__.'/modulos/baja_persona.php';
     $baja=true;
 ?>
 <html>
@@ -33,8 +33,8 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>   
                         <?php } ?>
-                    <th><a href="baja.php?id=<?php printf("%s",$p->id);?>" name="id">Eliminar</a></th>
-                    <th><a href="index.php">Volver</a></th></tr><br/>
+                    <th><a href="../modulos/baja.php?id=<?php printf("%s",$p->id);?>" name="id">Eliminar</a></th>
+                    <th><a href="../index.php">Volver</a></th></tr><br/>
                 </table>
     </body>
 </html>

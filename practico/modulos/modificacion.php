@@ -11,6 +11,8 @@
         
     error_reporting(E_ALL);
     ini_set("display_errors",true);
+    
+    //Se reciven valores por POST
     $nombre_nuevo= $_POST['nombre'];
     $apellido_nuevo= $_POST['apellido'];
     $fechnac_nuevo=$_POST['date'];
@@ -21,7 +23,7 @@
     header('Content-Type: text/html; charset=UTF-8');
     
     try {
-        
+        //Coneccion a la base de datos
         $pdo= new PDO('mysql:host=localhost;dbname=clientes_db',$usuario,$contraseña);
         
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
@@ -54,4 +56,4 @@
         echo 'Error de la coneccion a la BD:' . $e->getMessage();
     }
     
-    require __DIR__."/salida.php";
+    require __DIR__."/vistas/salida.php";

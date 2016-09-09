@@ -1,6 +1,6 @@
 <?php
-    require __DIR__.'/baja_persona.php';
-    require __DIR__.'/nacionalidades.php';
+    require __DIR__.'/modulos/baja_persona.php';
+    require __DIR__.'/modulos/nacionalidades.php';
     $modificacion=true;
 ?>
 
@@ -19,7 +19,7 @@ f.date.focus(); return false; }
         <title></title>
     </head>
     <body>
-        <form onsubmit="return formulario(this)" action="modificacion.php" method="POST">   
+        <form onsubmit="return formulario(this)" action="../modulos/modificacion.php" method="POST">   
         <h1>La persona Seleccionada es</h1>
         <table>
             <tr>

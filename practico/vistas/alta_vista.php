@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'/nacionalidades.php';
+    require __DIR__.'../modulos/nacionalidades.php';
     $alta = true;
 ?>
 <script>function formulario(f) {
@@ -17,7 +17,7 @@ f.date.focus(); return false; }
         <title>Alta de usuario</title>
     </head>
     <body>
-        <form onsubmit="return formulario(this)" action="alta.php" method="POST">    
+        <form onsubmit="return formulario(this)" action="../modulos/alta.php" method="POST">    
             <fieldset>
                 <legend>Formulario</legend>
                 <h1>Nombre:<input type="text" name="nombre" id="nombre"/> </h1>

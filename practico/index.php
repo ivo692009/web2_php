@@ -1,5 +1,5 @@
 <?php 
-    require __DIR__.'/listado_index.php';
+    require __DIR__.'/../modulos/listado_index.php';
     $id=0;
 ?>
 <html>
@@ -10,7 +10,7 @@
     <body>
         <fieldset>
             <legend>
-                <a href="alta_vista.php">Alta Nuevo</a><br/>
+                <a href="vistas/alta_vista.php">Alta Nuevo</a><br/>
                 <br/><br/>
                 
                 <table>
@@ -37,8 +37,8 @@
                            printf("<th>%s</th>",$p->descripcion);
                            ?>
                            
-                           <th><a href="modificacion_vista.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id ?>">Modificar</a></th>
-                           <th><a href="baja_vista.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id ?>">Baja</a></th></tr><br/>
+                           <th><a href="vistas/modificacion_vista.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id ?>">Modificar</a></th>
+                           <th><a href="vistas/baja_vista.php?id=<?php echo $p->id ?>" name="id" value="<?php $id=$p->id ?>">Baja</a></th></tr><br/>
                         <?php } ?>
                 </table>
             </legend>
