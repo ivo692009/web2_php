@@ -1,5 +1,5 @@
 <?php 
-    require __DIR__.'/../modulos/listado_index.php';
+    require __DIR__.'/modulos/listado_index.php';
     $id=0;
 ?>
 <html>

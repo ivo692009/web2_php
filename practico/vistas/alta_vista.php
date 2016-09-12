@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'../modulos/nacionalidades.php';
+    require __DIR__.'/../modulos/nacionalidades.php';
     $alta = true;
 ?>
 <script>function formulario(f) {

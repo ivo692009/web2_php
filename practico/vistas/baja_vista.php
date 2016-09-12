@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'/modulos/baja_persona.php';
+    require __DIR__.'/../modulos/baja_persona.php';
     $baja=true;
 ?>
 <html>

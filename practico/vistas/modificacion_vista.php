@@ -1,6 +1,6 @@
 <?php
-    require __DIR__.'/modulos/baja_persona.php';
-    require __DIR__.'/modulos/nacionalidades.php';
+    require __DIR__.'/../modulos/baja_persona.php';
+    require __DIR__.'/../modulos/nacionalidades.php';
     $modificacion=true;
 ?>
 
@@ -59,7 +59,7 @@ f.date.focus(); return false; }
                 <h1>Estado: </h1> 
                 <select name="estado">
                     <option id="estado" value="1">Activo</option>
-                    <option id="estado" value="0">Innactivo</option>
+                    <option id="estado" value="0">Inactivo</option>
                 </select>
                 <input type="hidden" name="id" value="<?php printf("%s",$p->id); ?>"/>
                 <input type="submit" name="Modificacion"/>
