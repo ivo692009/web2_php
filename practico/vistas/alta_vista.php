@@ -1,14 +1,23 @@
 <?php
-    require __DIR__.'/../modulos/nacionalidades.php';
-    $alta = true;
+require __DIR__ . '/../modulos/nacionalidades.php';
+$alta = true;
 ?>
 <script>function formulario(f) {
-if (f.nombre.value   == '') { alert ('El nombre esta vacío'); 
-f.nombre.focus(); return false; }
-if (f.apeliido.value   == '') { alert ('El apellido esta vacío'); 
-f.apellido.focus(); return false; }
-if (f.date.value   == '') { alert ('Fecha no asignada'); 
-f.date.focus(); return false; }
+        if (f.nombre.value == '') {
+            alert('El nombre esta vacío');
+            f.nombre.focus();
+            return false;
+        }
+        if (f.apeliido.value == '') {
+            alert('El apellido esta vacío');
+            f.apellido.focus();
+            return false;
+        }
+        if (f.date.value == '') {
+            alert('Fecha no asignada');
+            f.date.focus();
+            return false;
+        }
 </script>
 
 <html>
@@ -25,8 +34,8 @@ f.date.focus(); return false; }
                 <h1>Fecha de Nacimiento:<input type="date" name="date" id="date"/></h1>
                 <h1>Nacionalidad: </h1> 
                 <select name="nacionalidad_id"> 
-                    <?php foreach ($n as $n1):?>
-                    <option id="nacionalidad_id" value="<?php printf("%s",$n1->id); ?>"> <?php printf("%s",$n1->descripcion); ?> </option>
+                    <?php foreach ($n as $n1): ?>
+                        <option id="nacionalidad_id" value="<?php printf("%s", $n1->id); ?>"> <?php printf("%s", $n1->descripcion); ?> </option>
                     <?php endforeach; ?>
                 </select>
                 <h1>Estado: </h1> 

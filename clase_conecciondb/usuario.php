@@ -1,5 +1,6 @@
 <?php
-    $usuario='root';
-    $contraseña='udc';
+
+$usuario = 'root';
+$contraseña = 'udc';
 
 

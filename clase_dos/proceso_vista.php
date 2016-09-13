@@ -1,6 +1,7 @@
-<?php if(!isset($control2)):
+<?php
+if (!isset($control2)):
     echo "deja de flashear wacho, de nuevo";
-    endif; 
+endif;
 ?>
 
 <html>
@@ -10,9 +11,9 @@
     </head>
     <body>
         <?php
-        echo $r_nombre. " ";
-        echo $r_edad. " ";
-        echo $r_localidad. " ";
+        echo $r_nombre . " ";
+        echo $r_edad . " ";
+        echo $r_localidad . " ";
         ?>
     </body>
 </html>

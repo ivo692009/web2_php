@@ -12,8 +12,8 @@ and open the template in the editor.
     <body>
         <h1>cuarto proyecto php para poner en prueba </h1>
         <?php echo "hola mundo desde la casa de tu hermana"; ?>
-        <h2> la fecha es:<?php echo date("d/m/y");?> </h2>
-        
+        <h2> la fecha es:<?php echo date("d/m/y"); ?> </h2>
+
         <a href="listado.php?edad=21">prueba a mayores</a>
         <a href="listado.php?edad=12">prueba a menores</a>
     </body>
