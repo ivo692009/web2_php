@@ -5,6 +5,6 @@
     </head>
     <body>
         <h1>Datos Actualizados</h1></br>
-        <a href="../index.php">Volver al principio</a><br/>
+        <a href="index.php">Volver al principio</a><br/>
     </body>
 </html>

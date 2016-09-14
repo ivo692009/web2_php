@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . "/modulos/usuario.php";
+require __DIR__ . "/validaciones.php";
 
 error_reporting(E_ALL);
 ini_set("display_errors", true);
@@ -9,20 +10,16 @@ $username = $_POST['username'];
 $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
 
-if (($username == null) || ($password1 == null || $password2 == null) || ($password1 != $password2)) {
-    echo 'Datos invalidos';
-    header("Location : index.php");
-    ?>
-    <html><a href="login_alta.php">volver</a><br><br></html>
-    <?php
-    die();
-}
-
 
 header('Content-Type: text/html; charset=UTF-8');
 
 try {
+    //Validaciones
 
+    validar_datos($username, $password1, $password2);
+    validar_usuario($results, $username); 
+        
+    
     $pdo = new PDO('mysql:host=localhost;dbname=clientes_db', $usuario, $contraseña);
 
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
@@ -40,7 +37,7 @@ try {
     $stmt->setFetchMode(PDO::FETCH_OBJ); //podria ser PDO::FETCH_OBJ
     //sustituimos los parametros con los valores reales
     $stmt->bindParam(':u', $username);
-    $stmt->bindParam(':c', $password);
+    $stmt->bindParam(':c', $password1);
 
     //ejecutamos la consulta
     $stmt->execute();

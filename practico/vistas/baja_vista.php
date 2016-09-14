@@ -30,7 +30,7 @@ $baja = true;
                 ?>   
             <?php } ?>
             <th><a href="../modulos/baja.php?id=<?php printf("%s", $p->id); ?>" name="id">Eliminar</a></th>
-            <th><a href="../index.php">Volver</a></th></tr><br/>
+            <th><a href="index.php">Volver</a></th></tr><br/>
     </table>
 </body>
 </html>

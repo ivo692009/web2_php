@@ -4,7 +4,6 @@ if (!isset($alta)) {
     header("Location : alta_vista.php");
     die();
 }
-
 $alta = false;
 
 require __DIR__ . "/usuario.php";
