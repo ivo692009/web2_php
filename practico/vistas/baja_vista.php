@@ -1,4 +1,13 @@
 <?php
+
+if($_SESSION['loggedin'] == false){
+        echo 'Usted no esta Logeado';
+        ?>
+        <html><a href="../index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 require __DIR__ . '/../modulos/baja_persona.php';
 $baja = true;
 ?>

@@ -1,5 +1,13 @@
 <?php
 
+if($_SESSION['loggedin'] == false){
+        echo 'Usted no esta Logeado';
+        ?>
+        <html><a href="../index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 if (!isset($modificacion)) {
     header("Location : modificacion_vista.php");
     die();

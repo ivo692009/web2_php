@@ -1,5 +1,14 @@
 <?php
 require __DIR__ . '/../modulos/nacionalidades.php';
+
+if($_SESSION['loggedin'] == false){
+        echo 'Usted no esta Logeado';
+        ?>
+        <html><a href="../index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 $alta = true;
 ?>
 <script>function formulario(f) {

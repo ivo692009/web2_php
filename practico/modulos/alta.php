@@ -4,6 +4,15 @@ if (!isset($alta)) {
     header("Location : alta_vista.php");
     die();
 }
+
+if($_SESSION['loggedin'] == false){
+        echo 'Usted no esta Logeado';
+        ?>
+        <html><a href="../index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 $alta = false;
 
 require __DIR__ . "/usuario.php";

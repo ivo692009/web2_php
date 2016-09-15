@@ -29,7 +29,7 @@
          <label>Registrarse</label><br>
          <a href="login_alta.php">Registrarse</a><br><br>
          <label>Ingresar como anonimo</label><br>
-         <a href="login_alta.php">Ingreso Anonimo</a>
+         <a href="anonimos/index.php">Ingreso Anonimo</a>
         <hr />
 
     </body>
