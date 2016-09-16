@@ -21,31 +21,13 @@ require __DIR__ . '/../modulos/nacionalidades.php';
 $modificacion = true;
 ?>
 
-<script>function formulario(f) {
-        if (f.nombre.value == '') {
-            alert('El nombre esta vacío');
-            f.nombre.focus();
-            return false;
-        }
-        if (f.apeliido.value == '') {
-            alert('El apellido esta vacío');
-            f.apellido.focus();
-            return false;
-        }
-        if (f.date.value == '') {
-            alert('Fecha no asignada');
-            f.date.focus();
-            return false;
-        }
-</script>
-
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <form onsubmit="return formulario(this)" action="../modulos/modificacion.php" method="POST">   
+        <form  action="../modulos/modificacion.php" method="POST">   
             <h1>La persona Seleccionada es</h1>
             <table>
                 <tr>

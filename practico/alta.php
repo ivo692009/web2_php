@@ -49,4 +49,4 @@ try {
     echo 'Error de la coneccion a la BD:' . $e->getMessage();
 }
 
-require __DIR__ . "/vistas/index.php";
+require __DIR__ . "/index.php";
