@@ -18,7 +18,8 @@ try {
     //Validaciones
 
     validar_datos($username, $password1, $password2);
-    validar_usuario($results, $username); 
+    validar_usuario($results, $username);
+    validar_permiso($permiso);
         
     
     $pdo = new PDO('mysql:host=localhost;dbname=clientes_db', $usuario, $contraseña);

@@ -36,6 +36,17 @@ function validar_usuario($results, $username) {
     }
 }
 
+function validar_permiso($permiso) {
+    
+        if ($permiso <= 0 || $permiso >= 4) {
+            echo 'El permiso ingresado es invalido';
+            ?>
+            <html><a href="login_alta.php">volver</a><br><br></html>
+            <?php
+            die();
+        }
+}
+
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=clientes_db', $usuario, $contraseña);
 
