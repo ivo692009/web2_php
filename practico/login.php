@@ -12,6 +12,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$permiso = $_POST['permiso'];
 
 try {
 
@@ -52,6 +53,15 @@ try {
             $_SESSION['username'] = $username;
             $_SESSION['start'] = time();
             $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+            if($permiso==1){
+                $_SESSION['alta']=true;
+            }
+            if($permiso==2){
+                $_SESSION['baja']=true;
+            }
+            if($permiso==3){
+                $_SESSION['modificacion']=true;
+            }
 
             echo"<script type=\"text/javascript\">alert('Bienvenido'); window.location='../vistas/index.php';</script>";
         } else {

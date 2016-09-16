@@ -49,6 +49,12 @@
             <label>Confirmar Password:</label><br>
             <input name="password2" type="password" id="password2" required>
             <br><br>
+            <label>Tipo de Permiso:</label><br>
+            <label>Alta = 1</label><br>
+            <label>Baja = 2</label><br>
+            <label>Modificacion = 3</label><br>
+            <input name="permiso" type="number" id="permiso" required>
+            <br><br>
 
             <input type="submit" name="Submit" value="Registrar">
 

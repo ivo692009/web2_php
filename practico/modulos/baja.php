@@ -8,6 +8,14 @@ if($_SESSION['loggedin'] == false){
         die();
 }
 
+if($_SESSION['baja'] != TRUE){
+        echo 'Usted no tiene permiso para esta operacion';
+        ?>
+        <html><a href="../vistas/index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 if (!isset($baja)) {
     header("Location : baja_vista.php");
     die();

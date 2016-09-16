@@ -3,7 +3,15 @@
 if($_SESSION['loggedin'] == false){
         echo 'Usted no esta Logeado';
         ?>
-        <html><a href="../index.php">volver al inicio</a><br><br></html>
+<html><a href="../index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
+if($_SESSION['modificacion'] != TRUE){
+        echo 'Usted no tiene permiso para esta operacion';
+        ?>
+        <html><a href="../vistas/index.php">volver al inicio</a><br><br></html>
         <?php
         die();
 }

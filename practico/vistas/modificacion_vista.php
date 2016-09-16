@@ -8,6 +8,14 @@ if($_SESSION['loggedin'] == false){
         die();
 }
 
+if($_SESSION['modificacion'] != TRUE){
+        echo 'Usted no tiene permiso para esta operacion';
+        ?>
+        <html><a href="index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 require __DIR__ . '/../modulos/baja_persona.php';
 require __DIR__ . '/../modulos/nacionalidades.php';
 $modificacion = true;

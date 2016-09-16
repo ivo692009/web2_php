@@ -8,6 +8,14 @@ if($_SESSION['loggedin'] == false){
         die();
 }
 
+if($_SESSION['baja'] != TRUE){
+        echo 'Usted no tiene permiso para esta operacion';
+        ?>
+        <html><a href="../vistas/index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
+
 require __DIR__ . '/usuario.php';
 error_reporting(E_ALL);
 ini_set("display_errors", true);

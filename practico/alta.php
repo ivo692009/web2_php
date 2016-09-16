@@ -9,6 +9,7 @@ ini_set("display_errors", true);
 $username = $_POST['username'];
 $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
+$permiso= $_POST['permiso'];
 
 
 header('Content-Type: text/html; charset=UTF-8');
@@ -27,8 +28,8 @@ try {
     $pdo->exec("SET NAMES UTF8");
 
     //armamos el SQL
-    $sql = "INSERT INTO `ussers` (`usu`,`con`) 
-            VALUES (:u, :c)";
+    $sql = "INSERT INTO `ussers` (`usu`,`con`,`permiso`) 
+            VALUES (:u, :c, :p)";
 
     //preparamos un statement con el sql anterior
     $stmt = $pdo->prepare($sql);
@@ -38,6 +39,8 @@ try {
     //sustituimos los parametros con los valores reales
     $stmt->bindParam(':u', $username);
     $stmt->bindParam(':c', $password1);
+    $stmt->bindParam(':p', $permiso);
+    
 
     //ejecutamos la consulta
     $stmt->execute();

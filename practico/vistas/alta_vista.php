@@ -8,6 +8,13 @@ if($_SESSION['loggedin'] == false){
         <?php
         die();
 }
+if($_SESSION['alta'] != TRUE){
+        echo 'Usted no tiene permiso para esta operacion';
+        ?>
+        <html><a href="index.php">volver al inicio</a><br><br></html>
+        <?php
+        die();
+}
 
 $alta = true;
 ?>
