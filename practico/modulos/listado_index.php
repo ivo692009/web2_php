@@ -1,6 +1,8 @@
 <?php
 
-if($_SESSION['loggedin'] == false){
+session_start();
+
+if(!isset($_SESSION['username'])){
         echo 'Usted no esta Logeado';
         ?>
         <html><a href="../index.php">volver al inicio</a><br><br></html>

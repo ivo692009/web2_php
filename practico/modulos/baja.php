@@ -1,12 +1,5 @@
 <?php
 
-if($_SESSION['loggedin'] == false){
-        echo 'Usted no esta Logeado';
-        ?>
-        <html><a href="../index.php">volver al inicio</a><br><br></html>
-        <?php
-        die();
-}
 
 if($_SESSION['baja'] != TRUE){
         echo 'Usted no tiene permiso para esta operacion';
@@ -16,12 +9,6 @@ if($_SESSION['baja'] != TRUE){
         die();
 }
 
-if (!isset($baja)) {
-    header("Location : baja_vista.php");
-    die();
-}
-
-$baja = false;
 
 require __DIR__ . "/usuario.php";
 

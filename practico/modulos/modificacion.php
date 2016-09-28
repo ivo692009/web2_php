@@ -1,12 +1,5 @@
 <?php
-
-if($_SESSION['loggedin'] == false){
-        echo 'Usted no esta Logeado';
-        ?>
-<html><a href="../index.php">volver al inicio</a><br><br></html>
-        <?php
-        die();
-}
+session_start();
 
 if($_SESSION['modificacion'] != TRUE){
         echo 'Usted no tiene permiso para esta operacion';
@@ -15,13 +8,6 @@ if($_SESSION['modificacion'] != TRUE){
         <?php
         die();
 }
-
-if (!isset($modificacion)) {
-    header("Location : modificacion_vista.php");
-    die();
-}
-
-$modificacion = false;
 
 require __DIR__ . "/usuario.php";
 

@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../modulos/nacionalidades.php';
 
-if($_SESSION['loggedin'] == false){
+if(!isset($_SESSION['username'])){
         echo 'Usted no esta Logeado';
         ?>
         <html><a href="../index.php">volver al inicio</a><br><br></html>
@@ -16,7 +16,6 @@ if($_SESSION['alta'] != TRUE){
         die();
 }
 
-$alta = true;
 ?>
 <html>
     <head>

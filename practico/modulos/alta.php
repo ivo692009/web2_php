@@ -1,17 +1,8 @@
 <?php
 
-if (!isset($alta)) {
-    header("Location : alta_vista.php");
-    die();
-}
+session_start();
 
-if($_SESSION['loggedin'] == false){
-        echo 'Usted no esta Logeado';
-        ?>
-        <html><a href="../index.php">volver al inicio</a><br><br></html>
-        <?php
-        die();
-}
+
 if($_SESSION['alta'] != TRUE){
         echo 'Usted no tiene permiso para esta operacion';
         ?>
@@ -19,8 +10,6 @@ if($_SESSION['alta'] != TRUE){
         <?php
         die();
 }
-
-$alta = false;
 
 require __DIR__ . "/usuario.php";
 
@@ -67,4 +56,4 @@ try {
     echo 'Error de la coneccion a la BD:' . $e->getMessage();
 }
 
-require __DIR__ . "/vistas/salida.php";
+require __DIR__ . "/../vistas/salida.php";
